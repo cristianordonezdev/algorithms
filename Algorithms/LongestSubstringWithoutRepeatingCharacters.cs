@@ -10,52 +10,42 @@ namespace Algorithms
     {
         public int LengthOfLongestSubstring(string s)
         {
+            // FIRST SOLUTION
+            // public int LengthOfLongestSubstring(string s) {
 
-            //HashSet<char> substrings = new HashSet<char>();
-            //HashSet<int> ListLength = new HashSet<int> { 0 };
 
-            //if (s.Count() == 1)
-            //{
-            //    ListLength.Add(1);
-            //} else
-            //{
+            //     List<int> ListLength = new List<int> { 0 };
 
-            //    for (int i = 0; i < s.Count(); i++ )
-            //    {    
-            //       if (!substrings.Contains(s[i]))
-            //        {
-            //                substrings.Add(s[i]);
-            //        }
-            //       else
+            //     string substring = "";
+            //     if (s.Count() == 1)
+            //     {
+            //         ListLength[0] = 1;
+            //     } else
+            //     {
 
-            //        {
+            //         for (int i = 0; i < s.Count(); i++ )
+            //         {    
+            //             for (int k = i; k < s.Count(); k++ )
+            //             {
+            //                 if (!substring.Contains(s[k]))
+            //                 {
+            //                     substring += s[k];
+            //                 } else {
 
-            //                for (int j = i; j != 0; j= j -2)
-            //                {
-            //                    Console.WriteLine("Elimino " + s[j]);
-            //                    substrings.Remove(s[j]);
-            //                    foreach (char a in substrings)
-            //                    {
+            //                     ListLength.Add(substring.Count());
+            //                     substring = "";
+            //                     break;
+            //                 }
 
-            //                        Console.Write("--" + a + ".");
-            //                    }
+            //             }
 
-            //                }
-            //            }
+            //         }
 
-            //    }
+            //         ListLength.Sort();
+            //     }
 
-            //    //ListLength.Sort();
-            //}
-
-            //foreach(char a in substrings)
-            //    {
-
-            //        Console.WriteLine(a);
-            //    }
-
-            //    return substrings.Count();
-            //}
+            //     return ListLength[ListLength.Count() - 1];
+            // }
 
             // s = pwwkew
 
