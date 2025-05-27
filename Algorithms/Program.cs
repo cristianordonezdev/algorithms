@@ -5,7 +5,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        LongestSubstringWithoutRepeatingCharacters longest = new LongestSubstringWithoutRepeatingCharacters();
-        Console.WriteLine(longest.LengthOfLongestSubstring("pwwkew"));
+        //LongestSubstringWithoutRepeatingCharacters longest = new LongestSubstringWithoutRepeatingCharacters();
+
+        LongestPalindromicSubstring longest = new LongestPalindromicSubstring();
+        Console.WriteLine(longest.LongestPalindrome("a"));
     }
 }
