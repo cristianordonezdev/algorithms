@@ -6,8 +6,10 @@ class Program
     static void Main(string[] args)
     {
         //LongestSubstringWithoutRepeatingCharacters longest = new LongestSubstringWithoutRepeatingCharacters();
+        //LongestPalindromicSubstring longest = new LongestPalindromicSubstring();
+        ZigzagConversion solution = new ZigzagConversion();
 
-        LongestPalindromicSubstring longest = new LongestPalindromicSubstring();
-        Console.WriteLine(longest.LongestPalindrome("a"));
+
+        Console.WriteLine(solution.Convert("PAYPALISHIRING", 3));
     }
 }

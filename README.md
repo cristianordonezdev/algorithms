@@ -19,3 +19,4 @@ Each file contains a self-contained solution to a problem, written with clean an
 - [x] Two Sum
 - [x] Add Two Numbers 
 - [x] Longest Palindromic Substring
+- [ ] Zigzag Conversion
