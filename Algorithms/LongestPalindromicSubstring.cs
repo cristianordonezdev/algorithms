@@ -27,7 +27,7 @@ namespace Algorithms
         public string LongestPalindrome(string s)
         {
             // Passing 52 from 142 cases
-            List<string> palindroms = new List<string>();
+            string longest_palindroms = "";
 
             for (int i = 0; i <= s.Length; i++)
             {
@@ -38,17 +38,15 @@ namespace Algorithms
                     string sub = s[j..(j + i)];
                     Console.WriteLine(sub + " <-- ");
                     bool isPalindrom = IsPalindrom(sub);
-                    if (isPalindrom) palindroms.Add(sub);
+                    if (isPalindrom && sub.Count() > longest_palindroms.Count()) longest_palindroms = sub;
                 }
             }
             
 
-            palindroms.Max(x => x.Length);
-            foreach (var item in palindroms)
-            {
-                Console.WriteLine("Palindromo -> " + item);
-            }
-            return palindroms[palindroms.Count() - 1];
+
+            Console.WriteLine("Palindromo -> " + longest_palindroms);
+
+            return longest_palindroms;
         }
 
         public bool IsPalindrom(string s)
