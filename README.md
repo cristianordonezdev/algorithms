@@ -17,4 +17,5 @@ Each file contains a self-contained solution to a problem, written with clean an
 
 - [x] Longest Substring Without Repeating Characters
 - [x] Two Sum
-- [x] Add Two Numbers
+- [x] Add Two Numbers 
+- [x] Longest Palindromic Substring
