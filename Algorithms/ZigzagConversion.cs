@@ -29,75 +29,80 @@ namespace Algorithms
 
     internal class ZigzagConversion
     {
+        // this option resolves 1157 of 1157 testcases with 1367 ms 
         public string Convert(string s, int numRows)
         {
-            int numSpaces = numRows - 2;
 
-
-            List<List<char>> matrix = new List<List<char>>();
-            List<char> row = new List<char>();
-
-            int rowZeros = 0;
-            int columnZero = 0;
-
-            for (int i = 0; i < s.Count(); i++)
+            if (numRows > 1)
             {
-                if (rowZeros == (numSpaces + 1))
+
+                int numSpaces = numRows - 2;
+
+
+                List<List<char>> matrix = new List<List<char>>();
+                List<char> row = new List<char>();
+
+                int rowZeros = 0;
+                int columnZero = 0;
+
+                for (int i = 0; i < s.Count(); i++)
                 {
-                    rowZeros = 0;
-                    columnZero = 0;
-                }
-                if (rowZeros == 0)
-                {
-                    row.Add(s[i]);
-                    Console.WriteLine(s[i]);
-                } else
-                {
-                    int internalWhile = 0;
-                    while (internalWhile < numRows)
+                    if (rowZeros == (numSpaces + 1))
                     {
-                        if (columnZero < numSpaces)
+                        rowZeros = 0;
+                        columnZero = 0;
+                    }
+                    if (rowZeros == 0)
+                    {
+                        row.Add(s[i]);
+                       
+                    } else
+                    {
+                        int internalWhile = 0;
+                        while (internalWhile < numRows)
                         {
-                            row.Add('-');
-                            Console.WriteLine("-");
-                            columnZero++;
-                        } else if(columnZero == numSpaces)
-                        {
-                            row.Add(s[i]);
-                            Console.WriteLine(s[i]);
-                            columnZero = 0;
+                            if (columnZero < numSpaces)
+                            {
+                                row.Add('-');
+                               
+                                columnZero++;
+                            } else if(columnZero == numSpaces)
+                            {
+                                row.Add(s[i]);
+                                
+                                columnZero = 0;
+                            }
+
+                            internalWhile++;
+
                         }
 
-                        internalWhile++;
-
+                        matrix.Add(row);
+                      
+                        row = new List<char>();
+                        rowZeros++;
                     }
 
-                    matrix.Add(row);
-                    Console.WriteLine("=====================ROW");
-                    row = new List<char>();
-                    rowZeros++;
-                }
-
-                if (row.Count() == numRows || i == s.Count() - 1)
-                {
-                    int rowCount = row.Count();
-
-                    Console.WriteLine("rowCOunt" + rowCount);
-                    for (int j = 0; j < numRows - rowCount; j++)
+                    if (row.Count() == numRows || i == s.Count() - 1)
                     {
-                        row.Add('-');
+                        int rowCount = row.Count();
+                        for (int j = 0; j < numRows - rowCount; j++)
+                        {
+                            row.Add('-');
+                        }
+                        matrix.Add(row);
+                        row = new List<char>();
+                        rowZeros++;
                     }
-                    matrix.Add(row);
-                    Console.WriteLine("=====================ROW last");
-                    row = new List<char>();
-                    rowZeros++;
-                }
 
-            }
-            Console.WriteLine("=====================MATRIX=============================");
+                }
 
             
-            return Matrix(matrix, numRows); ;
+                return Matrix(matrix, numRows);
+            } else
+            {
+                return s;
+            }
         }
         public string Matrix(List<List<char>> matrix, int numRows)
         {
