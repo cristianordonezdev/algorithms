@@ -10,6 +10,6 @@ class Program
         ZigzagConversion solution = new ZigzagConversion();
 
 
-        Console.WriteLine(solution.Convert("PAYPALISHIRING", 3));
+        Console.WriteLine(solution.Convert("AB", 1));
     }
 }
