@@ -7,9 +7,10 @@ class Program
     {
         //LongestSubstringWithoutRepeatingCharacters longest = new LongestSubstringWithoutRepeatingCharacters();
         //LongestPalindromicSubstring longest = new LongestPalindromicSubstring();
-        ZigzagConversion solution = new ZigzagConversion();
+        //ZigzagConversion solution = new ZigzagConversion();
+        //ReverseInteger reverseInteger = new ReverseInteger();
+        StringToInteger stringToInteger = new StringToInteger();
 
-
-        Console.WriteLine(solution.Convert("AB", 1));
+        Console.WriteLine(stringToInteger.MyAtoi("42"));
     }
 }
