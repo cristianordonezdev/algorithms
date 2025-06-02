@@ -10,7 +10,9 @@ class Program
         //ZigzagConversion solution = new ZigzagConversion();
         //ReverseInteger reverseInteger = new ReverseInteger();
         StringToInteger stringToInteger = new StringToInteger();
+        //PalindromeNumber palindromeNumber = new PalindromeNumber();
+        //ContainerWithMostWater containerWithMostWater = new ContainerWithMostWater();
 
-        Console.WriteLine(stringToInteger.MyAtoi("42"));
+        Console.WriteLine(stringToInteger.MyAtoi("232"));
     }
 }

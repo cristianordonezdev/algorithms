@@ -21,4 +21,6 @@ Each file contains a self-contained solution to a problem, written with clean an
 - [x] Longest Palindromic Substring
 - [x] Zigzag Conversion
 - [x] Reverse Integer
-- [ ] String to Integer (atoi)
+- [x] String to Integer (atoi)
+- [ ] Palindrome Number
+- [ ] Container With Most Water
