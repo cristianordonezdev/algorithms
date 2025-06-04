@@ -11,8 +11,8 @@ class Program
         //ReverseInteger reverseInteger = new ReverseInteger();
         StringToInteger stringToInteger = new StringToInteger();
         //PalindromeNumber palindromeNumber = new PalindromeNumber();
-        //ContainerWithMostWater containerWithMostWater = new ContainerWithMostWater();
+        ContainerWithMostWater containerWithMostWater = new ContainerWithMostWater();
 
-        Console.WriteLine(stringToInteger.MyAtoi("232"));
+        Console.WriteLine(containerWithMostWater.MaxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]));
     }
 }
